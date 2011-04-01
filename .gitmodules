@@ -1,6 +1,3 @@
-[submodule "vim/bundle/vim-peepopen"]
-    path = vim/bundle/vim-peepopen
-    url = http://github.com/kunalghosh/PeepOpen-EditorSupport.git
 [submodule "vim/bundle/colorschemes"]
 	path = vim/bundle/colorschemes
 	url = http://github.com/flazz/vim-colorschemes.git
