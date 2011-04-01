@@ -1,4 +1,4 @@
-[submodule "vim/bundle/vim-peeopen"]
+[submodule "vim/bundle/vim-peepopen"]
     path = vim/bundle/vim-peepopen
     url = http://github.com/kunalghosh/PeepOpen-EditorSupport.git
 [submodule "vim/bundle/colorschemes"]
