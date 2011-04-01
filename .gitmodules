@@ -130,3 +130,6 @@
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/bundle/visual-star-search
 	url = http://github.com/nelstrom/vim-visual-star-search.git
+[submodule "PeepOpen-EditorSupport"]
+	path = PeepOpen-EditorSupport
+	url = http://github.com/kunalghosh/PeepOpen-EditorSupport.git
