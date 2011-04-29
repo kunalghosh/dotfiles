@@ -4,8 +4,11 @@ set bg=dark
 if &background == "dark"
     hi normal guibg=black
 endif
-set guifont=Inconsolata:h16
-colorscheme mac_classic
+"set guifont=Inconsolata:h16
+set guifont=Monaco
+
+"colorscheme mac_classic
+colorscheme molokai
 if exists('*HexHighlight()')
   " http://www.vim.org/scripts/script.php?script_id=2937
   nmap <leader>h :call HexHighlight()<Return>

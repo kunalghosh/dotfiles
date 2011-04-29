@@ -1,6 +1,9 @@
+[submodule "vim/bundle/vim-colors-solarized"]
+    path = vim/bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/colorschemes"]
 	path = vim/bundle/colorschemes
-	url = git://github.com/flazz/vim-colorschemes.git
+	url = git@github.com:flazz/vim-colorschemes.git
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
@@ -130,3 +133,6 @@
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/bundle/visual-star-search
 	url = git://github.com/nelstrom/vim-visual-star-search.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

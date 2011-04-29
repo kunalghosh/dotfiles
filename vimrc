@@ -46,7 +46,7 @@ set incsearch		" do incremental searching
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
-map Q gq
+" map Q gq
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -200,6 +200,10 @@ nnoremap vaT vatV
 " emacs style jump to end of line
 imap <C-e> <C-o>A
 imap <C-a> <C-o>I
+imap <C-V> <Esc>l"+gPi
+imap <S-Insert> <Esc>l"+gPi
+imap <C-X> <Esc>"+xi
+imap <C-C> <Esc>"+yi
 " Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
 imap <C-Enter> <C-o>o
 imap <C-S-Enter> <C-o>O
