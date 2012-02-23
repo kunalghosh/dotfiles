@@ -84,7 +84,7 @@
 	ignore = dirty
 [submodule "vim/bundle/textobj-rubyblock"]
 	path = vim/bundle/textobj-rubyblock
-	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
+	url = https://github.com.com:nelstrom/vim-textobj-rubyblock.git
 	ignore = dirty
 [submodule "vim/bundle/vimwiki"]
 	path = vim/bundle/vimwiki
@@ -104,7 +104,7 @@
 	ignore = dirty
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/bundle/visual-star-search
-	url = git@github.com:nelstrom/vim-visual-star-search.git
+	url = https://github.com.com:nelstrom/vim-visual-star-search.git
 	ignore = dirty
 [submodule "vim/bundle/space"]
 	path = vim/bundle/space
@@ -124,7 +124,7 @@
 	ignore = dirty
 [submodule "vim/bundle/qargs"]
 	path = vim/bundle/qargs
-	url = git@github.com:nelstrom/vim-qargs.git
+	url = https://github.com.com:nelstrom/vim-qargs.git
 [submodule "vim/bundle/nodelint"]
 	path = vim/bundle/nodelint
 	url = https://github.com/bigfish/vim-nodelint.git
