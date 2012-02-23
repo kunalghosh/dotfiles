@@ -58,10 +58,6 @@
 	path = vim/bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
 	ignore = dirty
-[submodule "vim/bundle/mac-classic"]
-	path = vim/bundle/mac-classic
-	url = git@github.com:nelstrom/vim-mac-classic-theme.git
-	ignore = dirty
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
