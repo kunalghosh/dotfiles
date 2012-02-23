@@ -1,35 +1,15 @@
-" Folding cheet sheet 
-" zR    open all folds
-" zM    close all folds
-" za    toggle fold at cursor position
-" zj    move down to start of next fold
-" zk    move up to end of previous fold
-" Manage plugins. {{{1
-runtime macros/matchit.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-let g:GetLatestVimScripts_allowautoinstall=1
-" An example for a vimrc file. {{{1
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Jul 02
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" vim: nowrap fdm=marker
 set nocompatible
+let mapleader = ","
+" Load plugins that ship with Vim {{{1
+runtime macros/matchit.vim
+runtime ftplugin/man.vim
 
-" allow backspacing over everything in insert mode
+" Load bundled plugins {{{1
+call pathogen#infect()
+call pathogen#helptags()
+
+" Behaviour {{{1
 set backspace=indent,eol,start
 
 if has("vms")
@@ -53,66 +33,34 @@ set incsearch		" do incremental searching
 inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
+set history=50
+set incsearch
+set visualbell t_vb=
+set hidden
+set nojoinspaces
+set wildmode=longest,list
+set nrformats=
 if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" Appearance {{{1
+set ruler
+set showcmd
+set laststatus=2
+set listchars=tab:▸\ ,eol:¬
+set number
+set cursorline
+" When the terminal has colors, enable syntax+search highlighting
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-" Preferences {{{1
-set visualbell t_vb=
-set number
-set cursorline
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" Indentation {{{1
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set hidden
 set nojoinspaces
@@ -347,51 +295,7 @@ command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
 " into
 "    :Refactor {'portrait':'landscape', 'landscape':'portrait'}
 
-" Status line {{{1
-" Good article on setting a statusline:
-"   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-" Always show the status line (even if no split windows)
-set laststatus=2
-" Mappings for a recovering TextMate user {{{1
-" Indentation {{{2
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
-" Commenting {{{2
-" requires NERDCommenter plugin
-vmap <D-/> ,c<space>gv
-map <D-/> ,c<space>
-
-" Duplicate selection {{{2
-"vmap <S-C-D> :copy'> <CR>V`[o
-"nmap <S-C-D> :copy .<CR>
-" Move selection {{{2
-  " Move current line down/up
-  map <C-Down> ]e
-  map <C-Up> [e
-  " Move visually selected lines down/up
-  vmap <C-Down> ]egv
-  vmap <C-Up> [egv
-" Move visual selection back/forwards
-set ww+=<,>
-vmap <C-Left> x<Left>P`[v`]
-vmap <C-Right> x<Right>P`[v`]
-" Configure plugins {{{1
-" Gundo.vim {{{2
-map <Leader>u :GundoToggle<CR>
-
-" TextObject customizations {{{2
-" Entire text object {{{3
-" Map text-object for entire buffer to `ia` and `aa`.
-let g:textobj_entire_no_default_key_mappings = 1
-xmap aa  <Plug>(textobj-entire-a)
-omap aa  <Plug>(textobj-entire-a)
-xmap ia  <Plug>(textobj-entire-i)
-omap ia  <Plug>(textobj-entire-i)
-" }}}
-
-"  Modelines: {{{1
-" vim: nowrap fdm=marker
+" Disable swapfile and backup {{{1
+set nobackup
+set noswapfile
 " }}}

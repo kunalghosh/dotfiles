@@ -33,12 +33,31 @@ alias m='rake db:migrate'
 alias svnadd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
 alias svnrmd="svn st | grep '^\!' | awk '{print $2}' | xargs svn rm"
 
-# git aliases
+# git aliases
 # http://titusd.co.uk/2010/08/29/use-g-as-an-alias-for-git-without-losing-autocompletion
 alias g='git'
 
 # Vim aliases
 alias rvim='mvim --remote-silent '
 
+# Functions
+# Fuzzy cd
+# Usage:
+#    cdf public
+# Changes to repos-public directory.
+# http://dpaste.org/P59h/
+function cdf() {
+  cd *$1*/
+}
+
 # Reload .bashrc
 alias refresh='. ~/.bashrc'
+
+export PATH=/Applications/SenchaSDKTools-1.2.3:$PATH
+
+export PATH=/Applications/SenchaSDKTools-1.2.3/command:$PATH
+
+export PATH=/Applications/SenchaSDKTools-1.2.3/jsbuilder:$PATH
+
+export PATH=/Applications/SenchaSDKTools-1.2.3/appbuilder:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
