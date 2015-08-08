@@ -24,7 +24,7 @@ So you need to set that up before using any plugins. To set it up:
 
 Launch `vim` and run `:PluginInstall`
 
-Finally install [oh-my-zsh][omzsh] [OPTIONAL]
+Finally install [oh-my-zsh][omzsh] ( ZSH [features][zshfeat]) 
     
     git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
      
@@ -42,3 +42,4 @@ Look at [Vundle Readme][vrm]
 [vurl]: https://github.com/gmarik/Vundle.vim
 [vrm]: https://github.com/gmarik/Vundle.vim/blob/master/README.md
 [omzsh]: https://github.com/robbyrussell/oh-my-zsh
+[zshfet]: http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692
