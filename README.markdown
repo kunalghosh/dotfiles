@@ -24,15 +24,16 @@ So you need to set that up before using any plugins. To set it up:
 
 Launch `vim` and run `:PluginInstall`
 
+Finally install [oh-my-zsh][omzsh] [OPTIONAL]
+    
+    git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+     
 # VIM #
 
 My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`
 respectively. All plugins and scripts are stored in the `dotfiles/vim`
 directory.
 
-Finally install oh-my-zsh [OPTIONAL]
-    
-    GitHub [Link][omzsh]     
 
 ## Adding Plugin Bundles ##
 
