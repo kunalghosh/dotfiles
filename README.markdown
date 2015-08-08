@@ -2,6 +2,10 @@ Installation
 
     git clone git://github.com/kunalghosh/dotfiles.git
 
+Create the VIM directory
+    
+    mkdir ~/dotfiles/vim 
+
 Create symlinks:
 
     ln -s ~/dotfiles/zshrc ~/.zshrc
