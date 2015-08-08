@@ -30,9 +30,14 @@ My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`
 respectively. All plugins and scripts are stored in the `dotfiles/vim`
 directory.
 
+Finally install oh-my-zsh [OPTIONAL]
+    
+    GitHub [Link][omzsh]     
+
 ## Adding Plugin Bundles ##
 
 Look at [Vundle Readme][vrm]
 
 [vurl]: https://github.com/gmarik/Vundle.vim
 [vrm]: https://github.com/gmarik/Vundle.vim/blob/master/README.md
+[omzsh]: https://github.com/robbyrussell/oh-my-zsh
