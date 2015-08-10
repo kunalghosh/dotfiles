@@ -5,6 +5,7 @@ export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.x
 export ANACONDA_HOME=$HOME/anaconda
 export PYTHONPATH=$HOME/Workspace/caffe/python:$PYTHONPATH
 export DYLD_FALLBACK_LIBRARY_PATH=$ANACONDA_HOME/lib:/usr/local/lib:/usr/lib
+. /Users/kunal/torch/install/bin/torch-activate #torch env variables
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
