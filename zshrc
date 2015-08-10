@@ -2,7 +2,9 @@
 ZSH=$HOME/.oh-my-zsh
 PATH=/Users/kunal/anaconda/bin:/opt/local/bin:/Users/kghosh/bin:/usr/local/texlive/2014basic/bin/x86_64-darwin/:$PATH
 export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH
-#export PATH=/usr/local/bin:/Users/kghosh/jython2.5.3/:/Users/kghosh/Downloads/phantomjs-1.6.1/bin:/Users/kghosh/Downloads/n1k0-casperjs-5428865/bin:/usr/local/Cellar/phantomjs/1.8.1/bin:~/Downloads/Cloud9BrazilBuild-1.0/bin:$PATH
+export ANACONDA_HOME=$HOME/anaconda
+export PYTHONPATH=$HOME/Workspace/caffe/python:$PYTHONPATH
+export DYLD_FALLBACK_LIBRARY_PATH=$ANACONDA_HOME/lib:/usr/local/lib:/usr/lib
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -55,7 +57,6 @@ setopt inc_append_history
 setopt share_history
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH=".:/apollo/env/SDETools/bin:$PATH"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 export EC2_HOME=~/.ec2
