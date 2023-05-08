@@ -39,6 +39,10 @@ if has("nvim")
 
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'chipsenkbeil/distant.nvim'
+
+  " Colorscheme
+  Plug 'shaunsingh/nord.nvim'
+  Plug 'folke/tokyonight.nvim'
 endif
 
 call plug#end()
