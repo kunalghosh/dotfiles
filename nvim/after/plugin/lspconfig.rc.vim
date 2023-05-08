@@ -57,6 +57,8 @@ nvim_lsp.pyright.setup {
   filetypes = { "python" }
   }
 
+nvim_lsp.r_language_server.setup({})
+
 -- nvim_lsp.pyls_ms.setup {
 -- 
 --   on_attach = on_attach,
