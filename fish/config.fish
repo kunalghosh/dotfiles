@@ -16,6 +16,7 @@ if type -q bat
   alias cat='bat'
 end
 
+abbr -s vim nvim
 # 'exa --tree --level=1 --long --git --icons --extended -x --git-ignore'
 
 

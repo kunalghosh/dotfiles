@@ -39,6 +39,13 @@ if has("nvim")
 
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'chipsenkbeil/distant.nvim'
+
+  " Colorscheme
+  Plug 'shaunsingh/nord.nvim'
+  Plug 'folke/tokyonight.nvim'
+
+  " Floating terminals
+  Plug 'voldikss/vim-floaterm'
 endif
 
 call plug#end()
