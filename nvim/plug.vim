@@ -43,6 +43,9 @@ if has("nvim")
   " Colorscheme
   Plug 'shaunsingh/nord.nvim'
   Plug 'folke/tokyonight.nvim'
+
+  " Floating terminals
+  Plug 'voldikss/vim-floaterm'
 endif
 
 call plug#end()

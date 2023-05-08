@@ -2,3 +2,5 @@
 
 nmap ,p "0p 
 nmap ,P "0P 
+
+nnoremap <S-l> :FloatermNew lazygit<CR>
