@@ -59,6 +59,54 @@ nvim_lsp.pyright.setup {
 
 nvim_lsp.r_language_server.setup({})
 
+local formatter = {
+  formatcommand = "prettier_d_slim --stdin --stdin-filepath ${input}",
+  formatstdin = true,
+}
+local linter = {
+  lintcommand = "eslint_d -f visualstudio --stdin --stdin-filename ${input}",
+  -- lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
+  lintIgnoreExitCode = true,
+  lintStdin = true,
+  lintFormats = { "%f(%l,%c): %tarning %m", "%f(%l,%c): %rror %m" },
+  formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
+  formatStdin = true,
+}
+local languages = {
+  --lua = {luafmt},
+  typescript = { formatter, linter },
+  javascript = { formatter, linter },
+  typescriptreact = { formatter, linter },
+  ["typescript.tsx"] = { formatter, linter },
+  javascriptreact = { formatter, linter },
+  ["javascript.jsx"] = { formatter, linter },
+  vue = { formatter, linter },
+  yaml = { formatter },
+  json = { formatter },
+  html = { formatter },
+  scss = { formatter },
+  css = { formatter },
+  markdown = { formatter },
+}
+
+nvim_lsp.eslint.setup({
+      filetypes = vim.tbl_keys(languages),
+      init_options = {
+        documentFormatting = true,
+      },
+      settings = {
+        lintDebounce = 500,
+        languages = languages,
+      },
+    on_attach = function(client, bufnr)
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        command = "EslintFixAll",
+      })
+    end,
+})
+
+
 -- nvim_lsp.pyls_ms.setup {
 -- 
 --   on_attach = on_attach,
@@ -70,4 +118,7 @@ nvim_lsp.r_language_server.setup({})
 --  }
 
 -- vim.lsp.set_log_level("debug")
+
+-- https://github.com/kabouzeid/nvim-lspinstall#advanced-configuration-recommended
+
 EOF
