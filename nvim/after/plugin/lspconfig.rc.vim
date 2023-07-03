@@ -58,7 +58,7 @@ nvim_lsp.pyright.setup {
   }
 
 nvim_lsp.r_language_server.setup({})
-
+nvim_lsp.eslint.setup({})
 -- nvim_lsp.pyls_ms.setup {
 -- 
 --   on_attach = on_attach,

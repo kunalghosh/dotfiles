@@ -34,6 +34,7 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'BurntSushi/ripgrep' 
   Plug 'onsails/lspkind-nvim'
   Plug 'kyazdani42/nvim-web-devicons'
 
@@ -46,6 +47,12 @@ if has("nvim")
 
   " Floating terminals
   Plug 'voldikss/vim-floaterm'
+
+  " stan nvim
+  Plug 'eigenfoo/stan-vim'
+
+  " Github copilot
+  Plug 'github/copilot.vim'
 endif
 
 call plug#end()
